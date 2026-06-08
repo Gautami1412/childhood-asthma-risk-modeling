@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" font-family="DejaVu Sans, Arial, sans-serif">
+  <rect width="760" height="480" fill="white"/>
+  <text x="380" y="36" text-anchor="middle" font-size="19" font-weight="bold" fill="#1f3a5f">Model discrimination: LASSO performs best (AUC = 0.84)</text>
+
+  <!-- axes -->
+  <line x1="90" y1="60" x2="90" y2="410" stroke="#444" stroke-width="1"/>
+  <line x1="90" y1="410" x2="720" y2="410" stroke="#444" stroke-width="1"/>
+
+  <!-- y gridlines + labels (0.78 .. 0.86) -->
+  <g font-size="12" fill="#555">
+    <line x1="90" y1="410.0" x2="720" y2="410.0" stroke="#eee"/><text x="82" y="414" text-anchor="end">0.78</text>
+    <line x1="90" y1="336.3" x2="720" y2="336.3" stroke="#eee"/><text x="82" y="340" text-anchor="end">0.80</text>
+    <line x1="90" y1="262.6" x2="720" y2="262.6" stroke="#eee"/><text x="82" y="266" text-anchor="end">0.82</text>
+    <line x1="90" y1="189.0" x2="720" y2="189.0" stroke="#eee"/><text x="82" y="193" text-anchor="end">0.84</text>
+    <line x1="90" y1="115.3" x2="720" y2="115.3" stroke="#eee"/><text x="82" y="119" text-anchor="end">0.86</text>
+  </g>
+  <text x="28" y="235" text-anchor="middle" font-size="13" fill="#333" transform="rotate(-90 28 235)">Test-set AUC</text>
+
+  <!-- CV reference line -->
+  <line x1="90" y1="155.8" x2="720" y2="155.8" stroke="#e76f51" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <text x="715" y="150" text-anchor="end" font-size="11" font-weight="bold" fill="#e76f51">5-fold CV AUC = 0.849</text>
+
+  <!-- bars -->
+  <rect x="145" y="200.0" width="110" height="210.0" fill="#1f3a5f"/>
+  <rect x="325" y="196.3" width="110" height="213.7" fill="#2a9d8f"/>
+  <rect x="505" y="284.7" width="110" height="125.3" fill="#1f3a5f"/>
+
+  <!-- value labels -->
+  <g font-size="15" font-weight="bold" fill="#222" text-anchor="middle">
+    <text x="200" y="192">0.837</text>
+    <text x="380" y="188">0.838</text>
+    <text x="560" y="277">0.814</text>
+  </g>
+
+  <!-- best marker -->
+  <text x="380" y="120" text-anchor="middle" font-size="12" font-weight="bold" fill="#2a9d8f">best</text>
+  <line x1="380" y1="126" x2="380" y2="190" stroke="#2a9d8f" stroke-width="1.5" marker-end="url(#arr)"/>
+  <defs><marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#2a9d8f"/></marker></defs>
+
+  <!-- model labels -->
+  <g font-size="13" fill="#222" text-anchor="middle">
+    <text x="200" y="432">Logistic</text><text x="200" y="449">Regression</text>
+    <text x="380" y="432">LASSO</text><text x="380" y="449">(penalized)</text>
+    <text x="560" y="432">Random</text><text x="560" y="449">Forest</text>
+  </g>
+</svg>
